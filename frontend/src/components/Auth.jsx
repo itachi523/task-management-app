@@ -15,7 +15,7 @@ const Auth = () => {
     setError(null);
     try {
       const endpoint = isLogin ? '/api/auth/login' : '/api/auth/register';
-      const res = await axios.post(`http://localhost:5001${endpoint}`, formData);
+      const res = await axios.post(`https://task-management-backend-0ysg.onrender.com${endpoint}`, formData);
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('username', res.data.username);
       navigate('/dashboard');

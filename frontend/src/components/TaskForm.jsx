@@ -34,7 +34,7 @@ const TaskForm = ({ task, onClose }) => {
       if (task) {
 
         await axios.put(
-          `http://localhost:5001/api/tasks/${task._id}`,
+          `https://task-management-backend-0ysg.onrender.com/api/tasks/${task._id}`,
           data,
           {
             headers: {
@@ -46,7 +46,7 @@ const TaskForm = ({ task, onClose }) => {
       } else {
 
         await axios.post(
-          'http://localhost:5001/api/tasks',
+          'https://task-management-backend-0ysg.onrender.com/api/tasks',
           data,
           {
             headers: {

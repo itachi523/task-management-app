@@ -28,7 +28,7 @@ const Dashboard = () => {
         localStorage.getItem('token');
 
       const res = await axios.get(
-        'http://localhost:5001/api/tasks',
+        'https://task-management-backend-0ysg.onrender.com/api/tasks',
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -52,7 +52,7 @@ const Dashboard = () => {
         localStorage.getItem('token');
 
       await axios.delete(
-        `http://localhost:5001/api/tasks/${id}`,
+        `https://task-management-backend-0ysg.onrender.com/api/tasks/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
